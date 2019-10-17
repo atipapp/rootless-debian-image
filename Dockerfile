@@ -1,5 +1,5 @@
 FROM debian:stretch
-RUN groupadd -g 999 appuser && \
-    useradd -r -u 999 -g appuser appuser
-USER appuser
+RUN groupadd -g 999 notroot && \
+    useradd -r -u 999 -g notroot notroot
+USER notroot
 CMD ["sleep", "999d"]
